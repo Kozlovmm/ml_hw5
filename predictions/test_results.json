@@ -1,0 +1,77 @@
+[
+  {
+    "image": "000029.jpg",
+    "distance": 1.0331,
+    "is_match": false
+  },
+  {
+    "image": "000030.jpg",
+    "distance": 0.7963,
+    "is_match": true
+  },
+  {
+    "image": "000031.jpg",
+    "distance": 0.9413,
+    "is_match": false
+  },
+  {
+    "image": "000032.jpg",
+    "distance": 0.9159,
+    "is_match": false
+  },
+  {
+    "image": "000033.jpg",
+    "distance": 0.9906,
+    "is_match": false
+  },
+  {
+    "image": "000034.jpg",
+    "distance": 0.8753,
+    "is_match": true
+  },
+  {
+    "image": "000035.jpg",
+    "distance": 1.0357,
+    "is_match": false
+  },
+  {
+    "image": "000036.jpg",
+    "distance": 1.032,
+    "is_match": false
+  },
+  {
+    "image": "000037.jpg",
+    "distance": 1.2401,
+    "is_match": false
+  },
+  {
+    "image": "000038.jpg",
+    "distance": 0.978,
+    "is_match": false
+  },
+  {
+    "image": "test1.jpg",
+    "distance": 0.6878,
+    "is_match": true
+  },
+  {
+    "image": "test2.jpg",
+    "distance": 0.3389,
+    "is_match": true
+  },
+  {
+    "image": "test3.jpg",
+    "distance": 0.2964,
+    "is_match": true
+  },
+  {
+    "image": "test4.jpg",
+    "distance": 0.434,
+    "is_match": true
+  },
+  {
+    "image": "test5.jpg",
+    "distance": 0.3503,
+    "is_match": true
+  }
+]
