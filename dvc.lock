@@ -1,0 +1,64 @@
+schema: '2.0'
+stages:
+  embed:
+    cmd: python src/embed_database.py
+    deps:
+    - path: data/my_dataset
+      hash: md5
+      md5: 9bbab65f48f0b765b947373505aba4c8.dir
+      size: 299359
+      nfiles: 47
+    - path: src/embed_database.py
+      hash: md5
+      md5: 3930a95e948cfb4a96a26732cc4ae170
+      size: 1475
+    outs:
+    - path: models/embeddings.pkl
+      hash: md5
+      md5: ca0308cfd315be33c1f7bebd4caf38f5
+      size: 111340
+  infer:
+    cmd: python src/inference.py
+    deps:
+    - path: models/classifier.pt
+      hash: md5
+      md5: e7310fd5501ff946e43ddc643bb4ae2b
+      size: 132581
+    - path: src/inference.py
+      hash: md5
+      md5: fa03c14f8de6b5f5d60779ee6d96f3b9
+      size: 1739
+    - path: validation/anchor.jpg
+      hash: md5
+      md5: 8efa0fdbbb386487baea97bd1b1fea20
+      size: 87284
+    - path: validation/test
+      hash: md5
+      md5: 0307cbf8b2ac4a0d531427525e2ec73e.dir
+      size: 804911
+      nfiles: 15
+    outs:
+    - path: predictions/test_results.json
+      hash: md5
+      md5: e50271c77c2cf6abb1d65cf93f91a70e
+      size: 1293
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: models/embeddings.pkl
+      hash: md5
+      md5: ca0308cfd315be33c1f7bebd4caf38f5
+      size: 111340
+    - path: src/train.py
+      hash: md5
+      md5: 6cbc1d277810c402cb1d44a121714ed0
+      size: 3183
+    outs:
+    - path: metrics/train_metrics.json
+      hash: md5
+      md5: 65ccebf1a5dae5d673c25b842f092a7c
+      size: 113
+    - path: models/classifier.pt
+      hash: md5
+      md5: e7310fd5501ff946e43ddc643bb4ae2b
+      size: 132581

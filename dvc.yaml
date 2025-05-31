@@ -1,0 +1,28 @@
+stages:
+  embed:
+    cmd: python src/embed_database.py
+    deps:
+      - src/embed_database.py
+      - data/my_dataset
+    outs:
+      - models/embeddings.pkl
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - models/embeddings.pkl
+    outs:
+      - models/classifier.pt
+    metrics:
+      - metrics/train_metrics.json
+
+  infer:
+    cmd: python src/inference.py
+    deps:
+      - src/inference.py
+      - models/classifier.pt
+      - validation/anchor.jpg
+      - validation/test
+    outs:
+      - predictions/test_results.json
